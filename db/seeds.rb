@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Admin.create(email: "admin@admin.com", password: "123456")
-puts "admin created"
+#Admin.create(email: "admin@admin.com", password: "123456")
+#puts "admin created"
+
+Product.create(title: "Casmisa Treino Adidas", description: "Casmisa de treino preta", value: 80)
+puts "product created"
