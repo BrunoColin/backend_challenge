@@ -1,0 +1,21 @@
+
+.item {
+    display: grid;
+    width: 288;
+    height: 296;
+}
+
+.item .title{
+    color: red;
+    font-size: 60px;
+}
+
+.item .title .a{
+    font-size: 60px;
+    text-align: left;
+    color: red;
+}
+
+h4 {
+    color: darkgreen;
+}

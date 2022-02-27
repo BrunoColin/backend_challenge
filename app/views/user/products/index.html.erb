@@ -19,3 +19,7 @@
     <% end %>
   </tbody>
 </table>
+
+<% @products.each do |product| %>
+  <img src= <%= product.image %> class="img-fluid" alt="Responsive image">
+<% end %>

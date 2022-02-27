@@ -29,5 +29,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
+
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      product:
+        title: "O título"
+        description: "A descrição"
+        image: "A imagem"
+        value: "O valor"

@@ -1,36 +1,37 @@
-<h4>Produtos</h4><br>
-
-  <div class="form-group">
-    <label>Teste se carrega a tela toda de novo ou não</label>
-   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<div class="container">
+  <div class="row">
+    <h4>Produtos</h4>
   </div>
 
-<th><%= link_to "Player Name", :sort => "title: :desc"%> </th>
-<th><%= link_to "Position", :sort => "title: :asc"%> </th>
+  <div class="row">
+    <div class="form-group">
+      <label>Teste se carrega a tela toda de novo ou não</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+  </div>
 
-<%= form_tag product_products_path, :method => 'get' do %>
+   <div class="row">
+    <%= link_to "Player Name", :sort => "title: :desc"%>
+    <%= link_to "Position", :sort => "title: :asc"%>
+
+    <%= form_tag product_products_path, :method => 'get' do %>
      <p>
         <%= text_field_tag :search, params[:search] %>
         <%= submit_tag "Search", :name => nil %>
      </p>
- <% end %>
+    <% end %>
+   </div>
 
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Título</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Valor</th>
-    </tr>
-  </thead>
-  <tbody>
-        <% @products.each do |product| %>
-        <tr>
-         <th scope="row"><%= product.id %></th>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.value %></td>
-        <% end %>
-  </tbody>
-</table>
+  <div class="row">
+    <% @products.each do |product| %>	
+      <div class="col-md-4">
+        <img src= <%= product.image %> alt="Responsive image" class="img-thumbnail" width=194 height=194>
+        <div>
+          <a><%= product.title %></a><br>
+          <a><%= product.description %></a><br>
+          <a><%= product.value %></a><br>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
