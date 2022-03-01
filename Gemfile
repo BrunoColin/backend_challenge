@@ -9,6 +9,10 @@ gem 'rspec-rails', '~> 5.0.0'
 
 gem 'jquery-rails'
 
+gem 'webpacker', '~> 5.4.3'
+
+gem 'will_paginate', '~> 3.3'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 

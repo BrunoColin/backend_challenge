@@ -4,6 +4,19 @@
   </div>
 
   <div class="row">
+    <div class="form-inline">
+      <div class="input-group">
+        <%= form_tag product_products_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Buscar produtos", class: 'form-control' %>
+          <span class="input-group-btn">
+            <%= submit_tag "Buscar", :name => nil, class: 'btn btn-default' %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="form-group">
       <label>Teste se carrega a tela toda de novo ou não</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -11,27 +24,13 @@
   </div>
 
    <div class="row">
-    <%= link_to "Player Name", :sort => "title: :desc"%>
-    <%= link_to "Position", :sort => "title: :asc"%>
-
-    <%= form_tag product_products_path, :method => 'get' do %>
-     <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-     </p>
-    <% end %>
+    <a> Ordenar:  </a>
+    <%= link_to "A-Z", :sort => "title: :asc"%>
+    <%= link_to "Z-A", :sort => "title: :desc"%>
    </div>
 
   <div class="row">
-    <% @products.each do |product| %>	
-      <div class="col-md-4">
-        <img src= <%= product.image %> alt="Responsive image" class="img-thumbnail" width=194 height=194>
-        <div>
-          <a><%= product.title %></a><br>
-          <a><%= product.description %></a><br>
-          <a><%= product.value %></a><br>
-        </div>
-      </div>
-    <% end %>
+     <div id="products"><%= render 'products' %></div>
   </div>
+   <%= will_paginate @products %>
 </div>

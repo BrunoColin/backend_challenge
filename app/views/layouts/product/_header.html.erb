@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container">
     <ul class="navbar-nav">
+      <div class="d-flex justify-content-center align-items-center">
+        <%= image_tag('logo.png', style: 'height: 45px;') %>
+      </div>
       <li class="nav-item <%= current_page?(product_products_path)? "active" : ""%>">
         <%= link_to("Home", product_products_path, class: "nav-link") %>
       </li>
@@ -8,7 +11,7 @@
     <div class="nav-item d-flex">
       <ul class="navbar-nav">
         <li class="nav-item">
-         <%= link_to("Login", new_admin_session_path, class: "nav-link") %>
+         <%= link_to("Entrar", new_admin_session_path, class: "nav-link") %>
         </li>
       </ul>
     </div>

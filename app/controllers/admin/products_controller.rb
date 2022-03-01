@@ -2,7 +2,7 @@ class Admin::ProductsController <AdminController
     before_action :set_product, only: [:edit, :update, :destroy]
     
         def index 
-            @products = Product.order(title: :desc)
+            @products = Product.order(title: :desc).paginate(:per_page => 12, :page => params[:page])
         end
     
         def new
@@ -41,7 +41,7 @@ class Admin::ProductsController <AdminController
         private 
     
         def form_params
-            params.require(:product).permit(:title, :description, :value, :price_cents, :image)
+            params.require(:product).permit(:title, :description, :value, :image)
         end
     
         def set_product

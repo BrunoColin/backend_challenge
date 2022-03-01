@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   end
 
   namespace :product do 
-    resources :products
+    resources :products do
+      member do
+        post :order_asc
+      end
+    end
   end
 
 end
