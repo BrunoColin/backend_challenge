@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# Admin.create(email: "admin@admin.com", password: "123456")
-# Admin.create(email: "bruno@admin.com", password: "123qwe")
+Admin.create(email: "admin@admin.com", password: "123456", name: "Admin")
+Admin.create(email: "bruno@admin.com", password: "123qwe", name: "Bruno")
 puts "admin created"
 
 Product.create(title: "Chuteira Predator Freak.3", description: "Chuteira Sem Cadarços Predator Freak.3 Campo", value: 349, image: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e71c01aaf40046f4919aac7700d49196_9366/Chuteira_Sem_Cadarcos_Predator_Freak.3_Campo_Preto_FW7529_01_standard.jpg")

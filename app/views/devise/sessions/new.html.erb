@@ -5,11 +5,9 @@
         <div class="d-flex justify-content-center align-items-center pb-2 mb-4">
           <%= image_tag('logo.png', style: 'height: 90px;') %>
         </div>
-
         <% if resource_name == :admin %>
-        <h5 class="text-center text-muted font-weight-normal mb-4">Acesso ao Painel Administrativo</h5>
+          <h5 class="text-center text-muted font-weight-normal mb-4">Acesso ao Painel Administrativo</h5>
         <% end %>
-
         <% if alert %>
           <div class="d-flex justify-content-center">
             <p class="text-danger"><%= alert %></p>
@@ -28,7 +26,9 @@
             <%= f.submit 'Entrar', class: "btn btn-success" %>
           </div>
         <% end %>
-
+        <div>
+          <%= link_to("Página inicial", product_products_path, class: "navbar-text") %>
+        </div>
       </div>
     </div>
   </div>
