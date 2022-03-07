@@ -39,3 +39,8 @@ en:
         description: "A descrição"
         image: "A imagem"
         value: "O valor"
+      admin:
+        name: "O nome"
+        email: "O email"
+        password: "A senha"
+        password_confirmation: "A confirmação da senha"

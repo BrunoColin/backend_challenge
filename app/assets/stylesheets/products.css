@@ -1,21 +1,16 @@
-
-.item {
-    display: grid;
-    width: 288;
-    height: 296;
+img {
+    height: 100%;
+    width: 100%;
 }
 
-.item .title{
-    color: red;
-    font-size: 60px;
+.product-detail-container a {
+    font-weight: bold;
 }
 
-.item .title .a{
-    font-size: 60px;
-    text-align: left;
-    color: red;
-}
-
-h4 {
-    color: darkgreen;
-}
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

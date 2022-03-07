@@ -13,15 +13,28 @@
  *= require_tree .
  *= require_self
  */
- 
+
 a {
-    color: blue;
+    color: #0fa242;
 }
 
-h4 {
-    color: aqua;
+a:link {
+    color: #0fa242;
+}
+
+a:hover {
+    color: #105729;
+}
+
+
+h1, h4 {
+    color: #0fa242;
+}
+
+h1 {
+    text-align: center;
 }
 
 h2 {
-    color: blueviolet;
+    color: #0fa242;
 }

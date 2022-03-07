@@ -21,9 +21,6 @@ Rails.application.routes.draw do
 
   namespace :product do 
     resources :products do
-      member do
-        post :order_asc
-      end
     end
   end
 

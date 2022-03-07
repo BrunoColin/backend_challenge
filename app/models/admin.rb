@@ -4,5 +4,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
+  validates :name, presence: { message: " é obrigatório" }
+  validates :name, length: { minimum: 3, message: " é muito pequeno (mínimo 3 caracteres)" }
+  validates :name, length: { maximum: 128, message: " é muito grande (máximo 128 caracteres)" }
 end
